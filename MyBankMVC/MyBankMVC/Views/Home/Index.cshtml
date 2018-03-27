@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<center><h2>MVC Bank Application</h2></center>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <table align="center">
+        <tr><td align="center">@Html.ActionLink("Login","Login","Home",null,null)</td></tr>
+        <tr><td align="center">@Html.ActionLink("Transfer to Savings", "TransferAmount", "Home", null, null)</td></tr>
+        <tr><td align="center">@Html.ActionLink("View Balances", "ViewBalance", "Home", null, null)</td></tr>
+        <tr><td align="center">@Html.ActionLink("Transfer History", "TransferHistory", "Home", null, null)</td></tr>
+        <tr><td align="center">@Html.ActionLink("NewAccounts", "NewAccounts", "Home", null, null)</td></tr>
+    </table>
+</body>
+</html>
+

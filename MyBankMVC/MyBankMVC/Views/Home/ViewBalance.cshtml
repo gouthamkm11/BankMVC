@@ -1,0 +1,29 @@
+﻿@model MyBankMVC.Models.Domain_Models.Balances
+
+@{
+    ViewBag.Title = "ViewBalance";
+}
+
+<h2>ViewBalance</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Balances</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        </div>
+        <h2>Checking Account Balance is @ViewBag.chk</h2>
+        <h2>Saving Account Balance is @ViewBag.save</h2>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="View Balance" class="btn btn-default" />
+            </div>
+        </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
